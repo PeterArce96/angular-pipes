@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class NumeroPipe implements PipeTransform {
 
-  transform(value: number, decimales: number): number {
+  transform(value: number, decimales: number, moneda?: string): number | string{
     const factor = Math.pow(10,decimales);
     let valorRedondeado;
     if(value >=0){
@@ -13,7 +13,8 @@ export class NumeroPipe implements PipeTransform {
     }else {
       valorRedondeado = (Math.round(-value * factor)/factor) * -1;
     }
-    return valorRedondeado;
+    let valorFormateado = new Intl.NumberFormat('de-DE', {minimumFractionDigits: decimales}).format(valorRedondeado);
+    return moneda ? valorFormateado + ' ' + moneda : valorFormateado;
   }
 
 }

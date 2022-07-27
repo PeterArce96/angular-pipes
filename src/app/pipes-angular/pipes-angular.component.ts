@@ -11,6 +11,7 @@ export class PipesAngularComponent implements OnInit {
   id: any = 12;
   ahora: Date = new Date();
   importe: number = 1876.765743;
+  divisa: string = '$';
 
   constructor() { }
 
