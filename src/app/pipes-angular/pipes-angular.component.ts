@@ -6,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipes-angular.component.css']
 })
 export class PipesAngularComponent implements OnInit {
+
   texto: string = 'ciudad de Madrid';
+  id: any = 12;
+  ahora: Date = new Date();
 
   constructor() { }
 
   ngOnInit(): void {
+    this.id = '000' + this.id;
   }
 
 }
