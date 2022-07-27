@@ -10,6 +10,7 @@ export class PipesAngularComponent implements OnInit {
   texto: string = 'ciudad de Madrid';
   id: any = 12;
   ahora: Date = new Date();
+  importe: number = 1876.765743;
 
   constructor() { }
 

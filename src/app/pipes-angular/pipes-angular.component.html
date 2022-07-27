@@ -79,3 +79,49 @@
         </tr>
     </table>
 </div>
+<div class="card">
+    <h1>Pipes decimal</h1>
+    <table>
+        <tr>
+            <th>Nombre Pipe</th>
+            <th>Valor sin Pipe</th>
+            <th>Valor con Pipe</th>
+            <th>Opciones del Pipe</th>
+        </tr>
+        <tr>
+            <td>decimal</td>
+            <td>{{importe}}</td>
+            <td>{{importe | number: "5.2-2"}}</td>
+            <td>N° mínimo de enteros . N° máximo decimales - N° mínimo decimales</td>
+        </tr>
+        <tr>
+            <td>decimal</td>
+            <td>{{importe}}</td>
+            <td>{{importe | number: ".2-2"}}</td>
+            <td>N° mínimo de enteros (vacío para que no muestre el 0 adelante) . N° máximo decimales - N° mínimo decimales</td>
+        </tr>
+    </table>
+</div>
+<div class="card">
+    <h1>Pipes currency</h1>
+    <table>
+        <tr>
+            <th>Nombre Pipe</th>
+            <th>Valor sin Pipe</th>
+            <th>Valor con Pipe</th>
+            <th>Opciones del Pipe</th>
+        </tr>
+        <tr>
+            <td>currency</td>
+            <td>{{importe}}</td>
+            <td>{{importe | currency}}</td>
+            <td>Nombre de la moneda en string, por defecto son Dólares</td>
+        </tr>
+        <tr>
+            <td>currency</td>
+            <td>{{importe}}</td>
+            <td>{{importe | currency: "EUR"}}</td>
+            <td>Nombre de la moneda en string</td>
+        </tr>
+    </table>
+</div>
